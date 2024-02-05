@@ -1,0 +1,198 @@
+.quote {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 1rem 3rem;
+  width: 500px;
+  max-width: 50em;
+  height: fit-content;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+}
+
+div .quote{
+   
+    padding: 0.2rem 1rem;
+    color: rgb(207, 195, 183);
+
+}
+
+.quote-title {
+    text-align: center;
+    font-family: Optima, sans-serif;
+    font-variant: normal;
+    font-weight: 500;
+    font-size: 2.6rem;
+    text-decoration: underline;
+    text-decoration-thickness: 0.2rem;
+    text-decoration-color: #258989;
+    padding-bottom: 1.2rem;
+    
+}
+
+
+.quote{
+    width: 90%;
+    height: max-content;
+    background-image: url('../svg/mark.svg');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: inherit;
+    background-blend-mode:color-burn;
+    background-size: 20vh;
+}
+
+.quote-text{
+    font-family: "Didot", serif;
+    font-size: 1.9rem;
+    font-weight: normal;
+    font-style: italic;
+    text-align: justify;
+    text-wrap: balance;
+    padding: 0 2rem;
+    margin: 0 auto;
+    line-height: 1.6;
+    color:oklch(from 234 49 78 90);
+    letter-spacing: 0.04rem;
+}
+p::first-letter{
+  font-size: 4rem;
+  color: rgb(71, 151, 151);
+  initial-letter: 2;
+  padding-right: 0.5rem;
+  font-family: "Snell Roundhand", cursive;
+  font-style: normal;
+  font-weight: 300;
+
+}
+.quote-author{
+    font-family: Optima, sans-serif;
+    font-size: 1.2rem;
+    text-align: right;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+
+}
+.quote-author i{
+    font-size: 1rem;
+    color: rgb(33, 145, 115);
+}
+
+.button span{
+  font-family: Optima, sans-serif;
+  font-variant: all-petite-caps;
+  font-size: 1.8rem;
+  font-weight: normal;
+  letter-spacing: 1px;
+   color: rgb(53, 168, 158);
+  text-shadow: 1px 2px 1px 3px #fff;
+}
+.button {
+  position: relative;
+  margin-top: 1.2rem;
+  padding: 10px 22px;
+  border: 2px 1px 3px #51248b; 
+  border-radius: 15px;
+  border-style: outset;
+  cursor: pointer;
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+.button:hover{
+  border-style: inset;
+  
+  transform: scale(0.95);
+  
+}
+
+.button:active {
+  transform: scale(0.96);
+}
+
+.button:before,
+.button:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.button:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.button:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+i {
+  color:  rgb(76, 157, 157);
+  padding: 0.4rem;
+  vertical-align: text-top;
+}

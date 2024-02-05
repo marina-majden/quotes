@@ -1,0 +1,84 @@
+
+* {
+  box-sizing: border-box;
+}
+html{
+  background-color: black;
+}
+body {
+  width: 60em;
+  max-width: fit-content;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #0b0c0f;
+  color: white;
+  align-content: center;
+  padding: 0;
+  margin: auto;
+  border-left-style: inset;
+  border-left-color: var(--enhanced-glow-color);
+  border-left-width: 10px;
+  border-right-style:inset;
+  border-right-color: var(--enhanced-glow-color);
+  border-right-width: 10px;
+}
+
+.title {
+  --glow-color: rgb(217, 176, 255);
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  --enhanced-glow-color: rgb(231, 206, 255);
+  --btn-color: rgb(100, 61, 136);
+  border: .25em solid var(--glow-color);
+  padding: 1.2rem 0.2rem;
+  color: var(--glow-color);
+  font-size: 2.2rem;
+  text-align: center;
+  font-family: Avenir, sans-serif;
+  font-weight: normal;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 1em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+  text-shadow: 0 0 .5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  letter-spacing: 4px;
+  width: 400px;
+  max-width: 20em;
+  padding: 1rem 2rem;
+  margin: 1rem auto;
+
+ }
+ 
+.title::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 75vh;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(0.3em);
+  opacity: .4;
+  transform: perspective(1.2em) rotateX(30deg) scale(1, 1);
+ }
+ 
+.title:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 2em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+ }
+ 
+.title:active {
+  box-shadow: 0 0 0.6em .25em var(--glow-color),
+         0 0 2.5em 2em var(--glow-spread-color),
+         inset 0 0 .5em .25em var(--glow-color);
+ }
