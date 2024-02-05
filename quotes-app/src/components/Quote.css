@@ -37,7 +37,7 @@ div .quote{
 .quote{
     width: 90%;
     height: max-content;
-    background-image: url('../svg/mark.svg');
+    background-image: url('../../public/mark.svg');
     background-position: right;
     background-repeat: no-repeat;
     background-color: inherit;
