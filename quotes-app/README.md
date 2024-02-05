@@ -1,2 +1,2 @@
-# very tacky Quotes app!
+# simple quote generator app
 ## made with React and Vite
